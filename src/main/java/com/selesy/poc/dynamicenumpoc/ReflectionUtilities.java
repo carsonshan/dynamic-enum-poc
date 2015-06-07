@@ -19,7 +19,6 @@ import sun.reflect.ReflectionFactory;
  * @author Matej Tymes
  * @author Steve Moyer <smoyer1@selesy.com>
  */
-@SuppressWarnings("restriction")
 public class ReflectionUtilities {
 
   /* ============================ */
@@ -94,6 +93,7 @@ public class ReflectionUtilities {
    * <b>Experimental and too much related to internal java implementation - use
    * on your own risk</b>
    */
+  @SuppressWarnings("restriction")
   public static void setStaticFieldValue(final Class<?> beanClass, final String fieldName, final Object newValue)
       throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
     // TODO: find some better way how to change static field
@@ -126,6 +126,7 @@ public class ReflectionUtilities {
    * this code has been inspired by the page:
    * http://www.javaspecialists.eu/archive/Issue161.html
    */
+  @SuppressWarnings("restriction")
   public static void setStaticFieldValue2(final Class<?> beanClass, final String fieldName, final Object newValue)
       throws NoSuchFieldException, IllegalAccessException {
     // TODO: find some better way how to change static field
@@ -222,6 +223,7 @@ public class ReflectionUtilities {
    * <b>Experimental and too much related to internal java implementation - use
    * on your own risk</b>
    */
+  @SuppressWarnings("restriction")
   public static Object invokeEnumConstructor(final Class<?> beanClass, final Class<?>[] parameterTypes, final Object[] values)
       throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException,
       NoSuchFieldException {
